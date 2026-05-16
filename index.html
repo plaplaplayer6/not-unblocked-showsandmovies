@@ -8,50 +8,75 @@
   <style>
     body {
       margin: 0;
-      background: black;
+      background: #0b0b0f;
       color: white;
       font-family: Arial, sans-serif;
-      text-align: center;
     }
 
-    h2 {
-      margin: 20px 0;
+    .header {
+      padding: 30px 20px 10px;
+    }
+
+    .title {
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .season {
+      margin-top: 5px;
+      color: #aaa;
+      font-size: 16px;
     }
 
     .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 15px;
       padding: 20px;
     }
 
-    button {
-      margin: 8px;
-      padding: 12px 18px;
-      background: #333;
-      color: white;
-      border: none;
-      border-radius: 5px;
+    .ep {
+      background: #1a1a22;
+      border: 1px solid #2a2a35;
+      border-radius: 10px;
+      padding: 15px;
       cursor: pointer;
+      text-align: center;
+      transition: 0.2s;
+      font-size: 14px;
     }
 
-    button:hover {
-      background: #555;
+    .ep:hover {
+      background: #2a2a35;
+      transform: scale(1.03);
+    }
+
+    .ep span {
+      display: block;
+      font-size: 12px;
+      color: #aaa;
+      margin-top: 5px;
     }
   </style>
 </head>
 
 <body>
 
-  <h2>Invincible - Episodes</h2>
+  <div class="header">
+    <div class="title">Invincible</div>
+    <div class="season">Season 1</div>
+  </div>
 
   <div class="grid">
 
-    <button onclick="openEp(1)">Episode 1</button>
-    <button onclick="openEp(2)">Episode 2</button>
-    <button onclick="openEp(3)">Episode 3</button>
-    <button onclick="openEp(4)">Episode 4</button>
-    <button onclick="openEp(5)">Episode 5</button>
-    <button onclick="openEp(6)">Episode 6</button>
-    <button onclick="openEp(7)">Episode 7</button>
-    <button onclick="openEp(8)">Episode 8</button>
+    <div class="ep" onclick="openEp(1)">Episode 1 <span>Start</span></div>
+    <div class="ep" onclick="openEp(2)">Episode 2</div>
+    <div class="ep" onclick="openEp(3)">Episode 3</div>
+    <div class="ep" onclick="openEp(4)">Episode 4</div>
+    <div class="ep" onclick="openEp(5)">Episode 5</div>
+    <div class="ep" onclick="openEp(6)">Episode 6</div>
+    <div class="ep" onclick="openEp(7)">Episode 7</div>
+    <div class="ep" onclick="openEp(8)">Episode 8</div>
 
   </div>
 
@@ -62,6 +87,9 @@
       window.open(base + ep, "_blank");
     }
   </script>
+
+</body>
+</html>
 
 </body>
 </html>
